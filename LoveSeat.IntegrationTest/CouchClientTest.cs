@@ -66,6 +66,7 @@ namespace LoveSeat.IntegrationTest
         [Test]
         public void Creating_A_Document_Should_Keep_Id_If_Supplied()
         {
+            string a = "";
             var doc = new Document<Bunny>(new Bunny());
             doc.Id = "myid";
             var db = client.GetDatabase(baseDatabase);

@@ -41,6 +41,7 @@ namespace LoveSeat.Support
                 return authCookie;
 
             if (string.IsNullOrEmpty(username)) return null;
+
             var request = new CouchRequest(baseUri + "_session");
             request.GetRequest().Headers.Add("Authorization:Basic " + Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(username + ":" + password)));
             using (HttpWebResponse response = request.Post()
